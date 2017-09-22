@@ -9,7 +9,11 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico"
+        "favicon.ico",
+        "css",
+        "js",
+        "images",
+        "data"
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -19,9 +23,12 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.css",
+        "../node_modules/owl.carousel/dist/assets/owl.carousel.min.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/owl.carousel/dist/owl.carousel.min.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
