@@ -1,9 +1,11 @@
-<div class="owl-carousel owl-theme">
-  <div> Your Content </div>
-  <div> Your Content </div>
-  <div> Your Content </div>
-  <div> Your Content </div>
-  <div> Your Content </div>
-  <div> Your Content </div>
-  <div> Your Content </div>
+<div class="row">
+  <div class="col-md-offset-4 col-md-8">
+  <youtube-player
+    [videoId]="videoId"
+    (ready)="savePlayer($event)"
+    (change)="onStateChange($event)"
+    (ready)="onReadystatechange($event)"
+  >
+  </youtube-player>
+  </div>
 </div>

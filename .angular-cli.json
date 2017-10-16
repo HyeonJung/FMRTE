@@ -13,7 +13,8 @@
         "css",
         "js",
         "images",
-        "data"
+        "data",
+        "fonts"
       ],
       "index": "index.html",
       "main": "main.ts",
