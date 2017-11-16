@@ -10,7 +10,7 @@ import { Video } from '../model/video.model';
 })
 export class MusicregistComponent implements OnInit {
   keyword = '';
-  videoList: Video[];
+  videoList: Video[] = new Array<Video>();
   constructor(private fmrteService: FmrteService) { }
 
   ngOnInit() {

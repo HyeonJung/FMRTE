@@ -1,0 +1,30 @@
+.ytBtn {
+  float:right;
+  margin-right:30px
+}
+
+.ytBtn span {
+  font-size:60px;
+  margin-right:10px
+}
+
+.ytBtn span:hover {
+  color: #2A3F54;
+}
+
+.result {
+  height:500px; background:rgb(195, 58, 44); margin-top:20px; overflow:auto;
+}
+
+.videoResult {
+  margin-top:10px;
+}
+
+.title {
+  font-size:15px; font-family: 'Noto Sans KR, sans-serif'; font-weight: 700; color:white; margin-top:20px;
+}
+
+.videoContent {
+  float:left; background:rgb(223, 219, 219); width:100%; margin-bottom:10px;
+}
+
