@@ -1,4 +1,5 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 declare const $: any;
 
 @Component({
@@ -6,21 +7,17 @@ declare const $: any;
   templateUrl: './musiclist.component.html',
   styleUrls: ['./musiclist.component.css']
 })
-export class MusiclistComponent implements OnInit, AfterViewInit {
+export class MusiclistComponent implements OnInit {
 
   player: YT.Player;
-  videoId = 'qDuKsiwS5xw';
+  videoId = 'mDXZ7RRh5T4';
+  youtubeWidth = 500;
 
   constructor() { }
 
   ngOnInit() {
-
+    this.youtubeWidth = $('.youtubeDiv').width();
   }
-
-  ngAfterViewInit() {
-
-  }
-
 
   savePlayer (player) {
     this.player = player;
@@ -34,7 +31,7 @@ export class MusiclistComponent implements OnInit, AfterViewInit {
     }
   }
 
-  onReadystatechange(event) {
+  onReady() {
      this.playVideo();
   }
 

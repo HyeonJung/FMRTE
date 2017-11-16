@@ -1,11 +1,14 @@
 <div class="row">
-  <div class="col-md-offset-4 col-md-8">
-  <youtube-player
+  <div class="youtubeDiv col-md-6 col-md-offset-3 " style="text-align: center">
+  <youtube-player style="width:100%"
     [videoId]="videoId"
+    [width]="youtubeWidth"
+    [height]="youtubeWidth"
     (ready)="savePlayer($event)"
     (change)="onStateChange($event)"
-    (ready)="onReadystatechange($event)"
+    (ready)="onReady()"
   >
   </youtube-player>
+  <a [routerLink]="['/regist']">등록</a>
   </div>
 </div>
