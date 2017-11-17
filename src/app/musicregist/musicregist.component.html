@@ -11,8 +11,10 @@
             <img src="{{video.thumbnail}}" style="position:relative"/>
         </div>
         <div class="ytBtn">
+
             <span><i class="fa fa-play-circle" aria-hidden="true"></i></span>
-            <span><i class="fa fa-plus-circle" aria-hidden="true"></i></span>
+            <a *ngIf="video.regist"><span><i class="fa fa-check-circle" aria-hidden="true"></i></span></a>
+            <a *ngIf="!video.regist" href="javascript:;" (click)="saveVideo(video)"><span><i class="fa fa-plus-circle" aria-hidden="true"></i></span></a>
             <!-- <span style="font-size:60px"><i class="fa fa-youtube-play" aria-hidden="true"></i></span> -->
         </div>
       </div>
@@ -27,6 +29,14 @@
               <input (keyup.enter)="searchVideo()" type="text" placeholder="Search" class="col-md-9 col-xs-12" [(ngModel)]="keyword" [ngModelOptions]="{standalone: true}"/>
               <input (click)="searchVideo()" type="submit" value="Search" class="col-md-3 col-xs-12"/>
           </form>
+      </div>
+  </div>
+</div> <!--Search Form End-->
+
+<div class="row"> <!--Search Form Start-->
+  <div class="col-md-12">
+      <div class="col-md-6 col-md-offset-3 search-form wow fadeInUp" data-wow-delay="4000ms">
+        <input (click)="moveMain()" type="submit" value="처음화면으로" class="col-md-offset-4 col-md-4 col-xs-12"/>
       </div>
   </div>
 </div> <!--Search Form End-->

@@ -3,4 +3,5 @@ export class Video {
   title: string;
   description: string;
   thumbnail: string;
+  regist: boolean;
 }
