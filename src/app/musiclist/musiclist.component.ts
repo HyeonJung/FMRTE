@@ -28,13 +28,13 @@ export class MusiclistComponent implements OnInit {
   savePlayer (player) {
     this.player = player;
     this.player.cueVideoById(this.video.videoId);
-    console.log('player instance', player);
   }
 
   onStateChange(event) {
-    console.log('player state', event.data);
     if (event.data === -1) {
       this.playVideo();
+    } else if (event.data === 0) {
+      this.videoChange();
     }
   }
 
@@ -59,7 +59,6 @@ export class MusiclistComponent implements OnInit {
 
   getVideo() {
     this.fmrteService.getRandomVideo().subscribe(response => {
-      console.log(response);
       if (response.status === 200) {
         this.video = response.json();
       }
