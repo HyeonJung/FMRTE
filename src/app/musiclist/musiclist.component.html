@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" style="margin-top:10%">
   <div class="youtubeDiv col-md-6 col-md-offset-3 " style="text-align: center">
   <youtube-player style="width:100%"
     [videoId]="video.videoId"
@@ -11,9 +11,9 @@
   </youtube-player>
   </div>
 
-  <div class="youtubeDiv col-md-6 col-md-offset-3 " style="text-align: center">
+  <div class="youtubeDiv col-md-6 col-md-offset-3 " style="text-align: center; margin-top:50px">
     <input (click)="videoChange()" type="button" style="border: 1px solid #3183ff; background-color: #3183ff;" value="노래 변경" class="listBtn col-md-offset-1 col-md-4 col-xs-12"/>
-    <input [routerLink]="['/regist']" type="button" value="노래 추가" class="col-md-offset-1 col-md-4 col-xs-12 listBtn"/>
+    <input [routerLink]="['/video/regist']" type="button" value="노래 추가" class="col-md-offset-1 col-md-4 col-xs-12 listBtn"/>
     <!-- <a id="kakao-link-btn" href="javascript:;" class="col-md-3 col-xs-12">
         <img src="//developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_small.png"/>
     </a> -->

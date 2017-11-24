@@ -19,7 +19,7 @@ export class MusicregistComponent implements OnInit {
 
 
   moveMain() {
-    this.router.navigate(['/list']);
+    this.router.navigate(['/video/list']);
   }
 
   /**
@@ -33,6 +33,7 @@ export class MusicregistComponent implements OnInit {
   }, error => {
     if (error.status === 401 || error.status === 403) {
       alert('로그인이 만료되었거나 잘못된 인증입니다.\n다시 로그인 해주세요');
+      this.router.navigate(['/user/login']);
     } else {
       alert('오류가 발생했습니다.');
     }
@@ -51,6 +52,7 @@ export class MusicregistComponent implements OnInit {
     }, error => {
       if (error.status === 401 || error.status === 403) {
         alert('로그인이 만료되었거나 잘못된 인증입니다.\n다시 로그인 해주세요');
+        this.router.navigate(['/user/login']);
       } else {
         alert('오류가 발생했습니다.');
       }

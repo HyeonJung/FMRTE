@@ -1,0 +1,11 @@
+<div class="row" style="margin-top:20%">
+  <div class="col-md-6 col-md-offset-3 " style="text-align: center">
+    <form action="#" method="get">
+      <input type="text" (enter)="doLogin()" placeholder="아이디" class="col-md-12 col-xs-12" [(ngModel)]="username" [ngModelOptions]="{standalone: true}"/>
+      <input type="password" (enter)="doLogin()" placeholder="비밀번호" class="col-md-12 col-xs-12" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" style="height:42px; border:1px solid #e6e4e4;outline-color:#ccc"/>
+      <input type="submit" value="로그인" class="col-md-12 col-xs-12" (click)="doLogin()"/>
+      <input type="submit" value="회원가입" class="col-md-12 col-xs-12" (click)="regist()" style="background-color:#4c63a2; border:1px solid #4c63a2"/>
+  </form>
+  </div>
+
+</div>

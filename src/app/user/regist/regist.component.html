@@ -1,0 +1,21 @@
+<div class="row" style="margin-top:10%">
+  <div class="col-md-6 col-md-offset-3 " style="text-align: center">
+     <h2>회원가입</h2>
+  </div>
+</div>
+
+
+<div class="row" style="margin-top:10px">
+
+  <div class="col-md-6 col-md-offset-3 " style="text-align: center">
+    <form action="#" method="get">
+      <input type="text" placeholder="아이디" class="col-md-12 col-xs-12" [(ngModel)]="user.username" [ngModelOptions]="{standalone: true}"/>
+      <input type="password"  placeholder="비밀번호" class="col-md-12 col-xs-12" [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}" style="height:42px; border:1px solid #e6e4e4;outline-color:#ccc"/>
+      <input type="text" placeholder="이메일" class="col-md-12 col-xs-12" [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}"/>
+      <input type="text" placeholder="이름" class="col-md-12 col-xs-12" [(ngModel)]="user.name" [ngModelOptions]="{standalone: true}"/>
+
+      <input type="submit" value="회원가입" class="col-md-12 col-xs-12" (click)="regist()" style="background-color:#4c63a2; border:1px solid #4c63a2"/>
+  </form>
+  </div>
+
+</div>

@@ -9,13 +9,17 @@ import { MusicregistComponent } from './musicregist/musicregist.component';
 import { routing } from './app.routing';
 import { FmrteService } from './service/fmrte.service';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './user/login/login.component';
+import { RegistComponent } from './user/regist/regist.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MusiclistComponent,
     HeaderComponent,
-    MusicregistComponent
+    MusicregistComponent,
+    LoginComponent,
+    RegistComponent
   ],
   imports: [
     BrowserModule,

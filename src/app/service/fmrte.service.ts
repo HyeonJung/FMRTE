@@ -4,6 +4,7 @@ import 'rxjs/add/operator/map';
 import { environment } from '../../environments/environment';
 import { Router } from '@angular/router';
 import { Video } from '../model/video.model';
+import { User } from '../model/user.model';
 
 @Injectable()
 export class FmrteService {
@@ -15,7 +16,9 @@ export class FmrteService {
      * @param keyword
      */
     public searchVideo(keyword: String) {
-      return this.http.get(environment.apiUrl + 'search?keyword=' + keyword);
+      return this.http.get(environment.apiUrl + 'api/search?keyword=' + keyword, {
+        headers : this.getHeadersFromSession()
+      });
     }
 
     /**
@@ -23,13 +26,44 @@ export class FmrteService {
      * @param video
      */
     public saveVideo(video: Video) {
-      return this.http.post(environment.apiUrl + 'video', video);
+      return this.http.post(environment.apiUrl + 'api/video', video, {
+        headers : this.getHeadersFromSession()
+      });
     }
 
     /**
      * 랜덤 동영상 가져오기
      */
     public getRandomVideo() {
-      return this.http.get(environment.apiUrl + 'video/random');
+      return this.http.get(environment.apiUrl + 'api/video/random', {
+        headers : this.getHeadersFromSession()
+      });
     }
+
+    /**
+     * 로그인
+     */
+    public login(user: User) {
+      return this.http.post(environment.apiUrl + 'login', user);
+    }
+
+    /**
+     * 회원가입
+     */
+    public regist(user: User) {
+      return this.http.post(environment.apiUrl + 'api/users', user);
+    }
+
+       /**
+     * 헤더 설정
+     */
+    getHeadersFromSession() {
+      const headers = new Headers({'authorization' : sessionStorage.getItem('access_token')});
+      return headers;
+    }
+
+
+
+
 }
+
