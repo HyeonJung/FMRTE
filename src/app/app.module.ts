@@ -11,6 +11,8 @@ import { FmrteService } from './service/fmrte.service';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './user/login/login.component';
 import { RegistComponent } from './user/regist/regist.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { RegistComponent } from './user/regist/regist.component';
     YoutubePlayerModule,
     routing,
     HttpModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [FmrteService],
   bootstrap: [AppComponent]
