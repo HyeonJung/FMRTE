@@ -9,12 +9,20 @@
 
   <div class="col-md-6 col-md-offset-3 " style="text-align: center">
     <form action="#" method="get">
-      <input type="text" placeholder="아이디" class="col-md-12 col-xs-12" [(ngModel)]="user.username" [ngModelOptions]="{standalone: true}"/>
-      <input type="password"  placeholder="비밀번호" class="col-md-12 col-xs-12" [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}" style="height:42px; border:1px solid #e6e4e4;outline-color:#ccc"/>
-      <input type="text" placeholder="이메일" class="col-md-12 col-xs-12" [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}"/>
-      <input type="text" placeholder="이름" class="col-md-12 col-xs-12" [(ngModel)]="user.name" [ngModelOptions]="{standalone: true}"/>
+        <mat-form-field style="width:100%; ">
+            <input matInput placeholder="아이디" [(ngModel)]="user.username" [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+        <mat-form-field style="width:100%; ">
+            <input matInput type="password" placeholder="패스워드" [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+        <mat-form-field style="width:100%; ">
+            <input matInput type="email" placeholder="이메일" [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
+        <mat-form-field style="width:100%; ">
+            <input matInput placeholder="이름" [(ngModel)]="user.name" [ngModelOptions]="{standalone: true}">
+        </mat-form-field>
 
-      <input type="submit" value="회원가입" class="col-md-12 col-xs-12" (click)="regist()" style="background-color:#4c63a2; border:1px solid #4c63a2"/>
+        <button mat-raised-button color="primary" style="width:100%;" (click)="regist()">회원가입</button>
   </form>
   </div>
 
